@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="{{url_for('index')}}">Inicio</a></li>
+            <li><a href="{{url_for('hello')}}">hello</a></li>
+            <li><a href="{{url_for('code',code='print(code)')}}">code</a></li>
+            <li><a href="{{url_for('register')}}">Registrar Usuario</a></li>
+        </ul>
+    </nav>
+
+
+    {#podemos utilizar bloques de contenido para poner el codigo que va a cambiar en el sitio web,y la demas estructura es la que se hereda,asi se hace mucho mas reutilizable en las demas plantillas. Aqui en la plantilla base se pone todo lo que se va a repetir y con esta se hace la herencia en las otras plantillas#}
+    {% block content %}
+    {% endblock %}
+
+
+
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+   
+</body>
+</html>

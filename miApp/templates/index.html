@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+{% block title %}Página de inicio{% endblock %}
+
+{% block content %}
+ {#en las plantillas podemos recibir los argumentos que pasemos en la funcion utilizando {{}}, tambien podemos utilizar estructuras de control si necesitamos utilizando {% %} y {% endif %} para indicar donde termina en el caso del if.  NOTA: en jinja asi son los comentarios#}
+    <h1>Bienvenido a mi sitio web</h1>
+    {% if name %}
+
+    {#se pueden utilizar filtros para modificar los datos,por ejemplo el filtro upper para mostrar texto en mayuscula,se utilizan anteponiendo el signo | #}
+    <p>Hola {{ name | upper }}</p>
+    {% else %}
+    <p>Hola desconocido</p>
+    {% endif %}
+
+    <h2>Lista de amigos</h2>
+    {#podemos tambien utilizar estructuras de control como bucles para iterar#}
+    <ul>
+        {% for friend in friends | reverse %}
+        {#filtro reverse revierte la lista,osea la muestra en el orden contrario#}
+        <li>{{ friend }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>La fecha de hoy es: {{ date | today}}</p>
+
+    {#podemos recibir funciones personalizadas#}
+    <p>La frase repetida es: {{ repeat("hola ",5)}}</p>
+{% endblock %}
+   
+   
