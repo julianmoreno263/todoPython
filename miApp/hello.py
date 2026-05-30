@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, request
-from flask_wtf import FlaskForm
-from wtforms import StringField,PasswordField,SubmitField #estas clases crean inputs de tipo str,password y submit
-from wtforms.validators import DataRequired,Length
+from flask_wtf import FlaskForm # type: ignore
+from wtforms import StringField,PasswordField,SubmitField # type: ignore #estas clases crean inputs de tipo str,password y submit
+from wtforms.validators import DataRequired,Length # type: ignore
 from datetime import datetime
 
 
