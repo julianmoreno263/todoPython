@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired,Length
 from datetime import datetime
 
 
+
 #para correr la aplicacion en flask se usa este comando: flask --app "nombre aplicacion" --debug run, el modo --debug lo que hace es depurar, si hay errores en la app este modo los marca,y cada vez que haya un cambio en la app no hay que estar corriendo de nuevo la aplicacion,ella se reinicia automaticamente
 
 
