@@ -1,7 +1,7 @@
 #configuraciones iniciales de la app
 
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy # type: ignore
 
 
 
@@ -25,8 +25,11 @@ def create_app():
 
     # --- MOVEMOS LAS IMPORTACIONES AQUÍ ABAJO ---
     # Esto rompe el círculo: 'db' ya existe cuando estos archivos se cargan
-    from . import todo
-    from . import auth
+    # from . import todo
+    # from . import auth
+
+    from todor import todo
+    from todor import auth
 
     #registrar blueprint
     app.register_blueprint(todo.bp)

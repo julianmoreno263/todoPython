@@ -1,5 +1,5 @@
 # Aquí ejecutamos la aplicación importando una instancia de la función create_app
-from todor import create_app
+from todor import create_app # type: ignore
 
 # Creamos la instancia de la app de forma global para que Gunicorn la pueda ver
 app = create_app()
