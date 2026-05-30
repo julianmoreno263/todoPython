@@ -1,5 +1,5 @@
 #archivo para las vistas de la aplicacion, utilizamos Blueprint para organizarlas, estas vistas con blueprint se deben de registrar en el archivo de configuracion __init__.py
-from turtle import title
+
 
 from flask import Blueprint, render_template, request,redirect,url_for,g
 from todor.auth import loginRequired
